@@ -195,3 +195,6 @@ async def on_command_error(ctx, error):
 
 def start():
     bot.run(TOKEN)
+
+if __name__ == "__main__":
+    start()
