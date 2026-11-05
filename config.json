@@ -1,0 +1,13 @@
+{
+  "prefix": "!",
+  "admin_role": "Admin",
+  "whitelist_role": "whitelisted",
+  "auto_kick": false,
+  "embed": {
+    "title": "✅ You've been whitelisted!",
+    "description": "Welcome! You now have access to the server.",
+    "color": "#57F287",
+    "image_url": "",
+    "footer": "Whitelisted"
+  }
+}
