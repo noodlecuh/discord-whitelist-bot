@@ -1,2 +1,2 @@
 [deploy]
-startCommand = "python bot.py & python app.py"
+startCommand = "python -u app.py"
