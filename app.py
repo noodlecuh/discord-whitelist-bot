@@ -1,8 +1,6 @@
-import os, subprocess, sys
+import os
 from flask import Flask, request, redirect, session, jsonify
 import json
-
-print("app.py loading...", flush=True)
 
 app = Flask(__name__)
 app.secret_key = os.getenv("SECRET_KEY", "change-this-secret")
@@ -309,12 +307,5 @@ def api_settings():
 
 
 if __name__ == "__main__":
-    print("Starting bot subprocess...", flush=True)
-    try:
-        subprocess.Popen([sys.executable, "bot.py"])
-        print("Bot subprocess started.", flush=True)
-    except Exception as e:
-        print(f"Bot failed: {e}", flush=True)
     port = int(os.getenv("PORT", 5000))
-    print(f"Starting Flask on port {port}...", flush=True)
     app.run(host="0.0.0.0", port=port)
