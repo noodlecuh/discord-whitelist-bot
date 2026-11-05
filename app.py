@@ -1,6 +1,5 @@
-import threading, json, os
+import json, os, subprocess, sys
 from flask import Flask, request, redirect, session, jsonify
-from bot import start as start_bot
 
 app = Flask(__name__)
 app.secret_key = os.getenv("SECRET_KEY", "change-this-secret")
@@ -449,7 +448,7 @@ def api_remove(uid):
 
 
 if __name__ == "__main__":
-    t = threading.Thread(target=start_bot, daemon=True)
-    t.start()
+    subprocess.Popen([sys.executable, "bot.py"])
     port = int(os.getenv("PORT", 5000))
+    print(f"Starting Flask on port {port}")
     app.run(host="0.0.0.0", port=port)
