@@ -1,4 +1,4 @@
-import json, os, subprocess, sys
+import json, os, subprocess, sys  # noqa
 from flask import Flask, request, redirect, session, jsonify
 
 app = Flask(__name__)
